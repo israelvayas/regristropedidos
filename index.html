@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lista de Pedidos</h1>
+
+    <!-- Formulario para agregar pedidos -->
+    <form id="pedidoForm">
+        <input type="text" id="personaje" placeholder="Personaje" required>
+        <input type="number" id="cantidad" placeholder="Cantidad" required>
+        <input type="number" id="total" placeholder="Total" step="0.01" required>
+        <input type="text" id="cliente" placeholder="Cliente" required>
+        <input type="date" id="fechaEntrega" required>
+        <button type="submit">Agregar Pedido</button>
+    </form>
+
+    <!-- Botón para eliminar todos los pedidos -->
+    <button id="eliminarTodos" class="boton-rojo">Eliminar Todos los Pedidos</button>
+
+    <!-- Tabla de pedidos -->
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Personaje</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Cliente</th>
+                <th>Fecha de Entrega</th>
+                <th>Pagado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="pedidoLista"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Total Pendiente de Pago:</strong></td>
+                <td id="totalGeneral">$0.00</td>
+                <td colspan="3"><strong>Total Pagado:</strong></td>
+                <td id="totalPagado">$0.00</td>
+            </tr>
+            <tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
